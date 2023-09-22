@@ -1,0 +1,38 @@
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilus.css">
+    <title>Feladat</title>
+</head>
+<style>
+    .feher {
+      background-color: white;
+    }
+    .fekete {
+      background-color: black;
+    }
+    .zold {
+      background-color: green;
+    }
+    .piros {
+      background-color: red;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>Táblázat Készítő</h2>
+  <label for="cellaSzam">Cellák száma: </label>
+  <input type="range" id="cellaSzam" min="1" max="10" value="5">
+  <br><br>
+  <label for="cellaMeret">Cellák mérete: </label>
+  <input type="range" id="cellaMeret" min="20" max="100" value="30" oninput="updateCellaMeret(this.value)">
+  <br><br>
+  <button onclick="keszitTabla()">Táblázat létrehozása</button>
+
+  <div id="tablaKontener"></div>
+  <script src="java.js"></script>
+
+</body>
+</html>
